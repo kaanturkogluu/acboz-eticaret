@@ -1,0 +1,21 @@
+<?php
+
+
+require_once __DIR__ . '/../template/template.php';
+
+?>
+
+
+    <!-- Ana İçerik -->
+    <main class="main-content">
+  
+    </main>
+
+
+<?php
+
+require_once __DIR__ . '/../template/footer.php';
+
+
+
+?>

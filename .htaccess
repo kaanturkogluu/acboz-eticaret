@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /eticaret/
+
+# Keep existing files and directories working normally first
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule . - [L]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule . - [L]
+
+# Route /eticaret/giris and /eticaret/panel to panel/pages/giris.php
+RewriteRule ^(?:giris|panel)/?$ panel/pages/giris.php [L]
+

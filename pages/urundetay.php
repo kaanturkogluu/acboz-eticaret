@@ -1,0 +1,436 @@
+<?php
+
+
+require_once __DIR__ . '/../template/template.php';
+
+?>
+ <link rel="stylesheet" href="<?=$router->baseUrl()?>assets/css/product-detail.css">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="#">Bilgisayar Bileşenleri</a></li>
+                <li><a href="#">Ekran Kartları</a></li>
+                <li class="active">RTX 4090 Gaming</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Ana İçerik -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Ürün Detay Grid -->
+            <div class="product-detail-grid">
+                <!-- Sol: Ürün Görselleri -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="https://img.freepik.com/free-photo/rtx-4090-graphics-card_23-2149241976.jpg?w=600&h=400&fit=crop&crop=center" alt="RTX 4090 Gaming" id="mainImage">
+                        <div class="image-zoom-lens"></div>
+                    </div>
+                    <div class="thumbnail-images">
+                        <div class="thumbnail active" data-src="https://img.freepik.com/free-photo/rtx-4090-graphics-card_23-2149241976.jpg?w=600&h=400&fit=crop&crop=center">
+                            <img src="https://img.freepik.com/free-photo/rtx-4090-graphics-card_23-2149241976.jpg?w=150&h=100&fit=crop&crop=center" alt="RTX 4090 - Görsel 1">
+                        </div>
+                        <div class="thumbnail" data-src="https://img.freepik.com/free-photo/gaming-graphics-card_23-2149241992.jpg?w=600&h=400&fit=crop&crop=center">
+                            <img src="https://img.freepik.com/free-photo/gaming-graphics-card_23-2149241992.jpg?w=150&h=100&fit=crop&crop=center" alt="RTX 4090 - Görsel 2">
+                        </div>
+                        <div class="thumbnail" data-src="https://img.freepik.com/free-photo/rtx-graphics-card_23-2149241993.jpg?w=600&h=400&fit=crop&crop=center">
+                            <img src="https://img.freepik.com/free-photo/rtx-graphics-card_23-2149241993.jpg?w=150&h=100&fit=crop&crop=center" alt="RTX 4090 - Görsel 3">
+                        </div>
+                        <div class="thumbnail" data-src="https://img.freepik.com/free-photo/gaming-pc-setup_23-2149241987.jpg?w=600&h=400&fit=crop&crop=center">
+                            <img src="https://img.freepik.com/free-photo/gaming-pc-setup_23-2149241987.jpg?w=150&h=100&fit=crop&crop=center" alt="RTX 4090 - Görsel 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ: Ürün Bilgileri -->
+                <div class="product-info-detail">
+                    <div class="product-header">
+                        <h1 class="product-title">NVIDIA GeForce RTX 4090 Gaming</h1>
+                        <div class="product-badges">
+                            <span class="badge new">Yeni</span>
+                            <span class="badge hot">Popüler</span>
+                            <span class="badge discount">%15 İndirim</span>
+                        </div>
+                    </div>
+
+                    <div class="product-rating-detail">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-score">4.9</span>
+                        <span class="rating-count">(89 değerlendirme)</span>
+                        <a href="#reviews" class="review-link">Tüm değerlendirmeleri gör</a>
+                    </div>
+
+                    <div class="product-price-detail">
+                        <div class="price-info">
+                            <span class="old-price">৳89,999</span>
+                            <span class="current-price">৳79,999</span>
+                            <span class="discount-amount">৳10,000 tasarruf</span>
+                        </div>
+                        <div class="installment-info">
+                            <span class="installment-text">12x ৳6,667 taksit</span>
+                            <span class="interest-free">Faizsiz</span>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <label for="quantity">Adet:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="changeQuantity(-1)">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button class="qty-btn" onclick="changeQuantity(1)">+</button>
+                            </div>
+                        </div>
+                        
+                        <button class="add-to-cart-large">
+                            <i class="fas fa-shopping-cart"></i>
+                            Sepete Ekle
+                        </button>
+                        
+                        <button class="buy-now">
+                            <i class="fas fa-bolt"></i>
+                            Hemen Al
+                        </button>
+                    </div>
+
+                    <div class="product-features">
+                        <h3>Öne Çıkan Özellikler</h3>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> 24GB GDDR6X Video Belleği</li>
+                            <li><i class="fas fa-check"></i> Ray Tracing ve DLSS 3.0</li>
+                            <li><i class="fas fa-check"></i> 450W TDP, 8+8 Pin Güç</li>
+                            <li><i class="fas fa-check"></i> 3x Fan, RGB Aydınlatma</li>
+                            <li><i class="fas fa-check"></i> 3 Yıl Garanti</li>
+                        </ul>
+                    </div>
+
+                    <div class="delivery-info">
+                        <div class="delivery-item">
+                            <i class="fas fa-truck"></i>
+                            <div class="delivery-text">
+                                <strong>Ücretsiz Kargo</strong>
+                                <span>2-3 iş günü içinde teslimat</span>
+                            </div>
+                        </div>
+                        <div class="delivery-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="delivery-text">
+                                <strong>Güvenli Ödeme</strong>
+                                <span>256-bit SSL şifreleme</span>
+                            </div>
+                        </div>
+                        <div class="delivery-item">
+                            <i class="fas fa-undo"></i>
+                            <div class="delivery-text">
+                                <strong>Kolay İade</strong>
+                                <span>14 gün içinde ücretsiz iade</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ürün Detay Sekmeleri -->
+            <div class="product-tabs">
+                <div class="tab-navigation">
+                    <button class="tab-btn active" data-tab="description">Açıklama</button>
+                    <button class="tab-btn" data-tab="specifications">Teknik Özellikler</button>
+                    <button class="tab-btn" data-tab="reviews">Değerlendirmeler</button>
+                    <button class="tab-btn" data-tab="shipping">Kargo & İade</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Açıklama Sekmesi -->
+                    <div class="tab-pane active" id="description">
+                        <div class="description-content">
+                            <h3>RTX 4090 Gaming - Oyun Dünyasının Yeni Kralı</h3>
+                            <p>NVIDIA GeForce RTX 4090, oyun dünyasında yeni bir çağ başlatıyor. 24GB GDDR6X video belleği ve gelişmiş RTX teknolojileri ile en zorlu oyunları bile maksimum ayarlarda oynayabilirsiniz.</p>
+                            
+                            <h4>Ray Tracing ve DLSS 3.0</h4>
+                            <p>Gerçek zamanlı ışık yansımaları ve gölgeler için Ray Tracing teknolojisi, DLSS 3.0 ile birleşerek performansı %300'e kadar artırır. 4K çözünürlükte bile 120+ FPS elde edebilirsiniz.</p>
+                            
+                            <h4>Soğutma ve Tasarım</h4>
+                            <p>3 adet 100mm fan ile gelişmiş soğutma sistemi, RGB aydınlatma ile görsel şölen sunar. Metal backplate ile güçlü yapı ve uzun ömür garantisi.</p>
+                        </div>
+                    </div>
+
+                    <!-- Teknik Özellikler Sekmesi -->
+                    <div class="tab-pane" id="specifications">
+                        <div class="specs-grid">
+                            <div class="spec-category">
+                                <h4>GPU Özellikleri</h4>
+                                <div class="spec-item">
+                                    <span class="spec-label">GPU Modeli:</span>
+                                    <span class="spec-value">NVIDIA GeForce RTX 4090</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Video Belleği:</span>
+                                    <span class="spec-value">24GB GDDR6X</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Bellek Hızı:</span>
+                                    <span class="spec-value">21 Gbps</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">CUDA Çekirdekleri:</span>
+                                    <span class="spec-value">16,384</span>
+                                </div>
+                            </div>
+
+                            <div class="spec-category">
+                                <h4>Performans</h4>
+                                <div class="spec-item">
+                                    <span class="spec-label">Boost Clock:</span>
+                                    <span class="spec-value">2.52 GHz</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">TDP:</span>
+                                    <span class="spec-value">450W</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Güç Bağlantısı:</span>
+                                    <span class="spec-value">8+8 Pin</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Önerilen PSU:</span>
+                                    <span class="spec-value">850W</span>
+                                </div>
+                            </div>
+
+                            <div class="spec-category">
+                                <h4>Bağlantılar</h4>
+                                <div class="spec-item">
+                                    <span class="spec-label">DisplayPort:</span>
+                                    <span class="spec-value">3x DP 1.4a</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">HDMI:</span>
+                                    <span class="spec-value">2x HDMI 2.1</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">PCIe:</span>
+                                    <span class="spec-value">PCIe 4.0 x16</span>
+                                </div>
+                            </div>
+
+                            <div class="spec-category">
+                                <h4>Boyutlar</h4>
+                                <div class="spec-item">
+                                    <span class="spec-label">Uzunluk:</span>
+                                    <span class="spec-value">304mm</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Genişlik:</span>
+                                    <span class="spec-value">137mm</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Yükseklik:</span>
+                                    <span class="spec-value">61mm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Değerlendirmeler Sekmesi -->
+                    <div class="tab-pane" id="reviews">
+                        <div class="reviews-summary">
+                            <div class="overall-rating">
+                                <div class="rating-circle">
+                                    <span class="rating-number">4.9</span>
+                                    <span class="rating-max">/5</span>
+                                </div>
+                                <div class="rating-details">
+                                    <div class="stars-large">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p>89 değerlendirme</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://img.freepik.com/free-photo/portrait-young-man_23-2149241980.jpg?w=50&h=50&fit=crop&crop=center" alt="Kullanıcı" class="reviewer-avatar">
+                                        <div class="reviewer-details">
+                                            <h5>Ahmet Y.</h5>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="review-date">2 gün önce</span>
+                                </div>
+                                <p class="review-text">"Mükemmel performans! Cyberpunk 2077'yi 4K'da maksimum ayarlarda oynuyorum, hiç lag yok. Ray tracing gerçekten etkileyici."</p>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://img.freepik.com/free-photo/portrait-young-woman_23-2149241981.jpg?w=50&h=50&fit=crop&crop=center" alt="Kullanıcı" class="reviewer-avatar">
+                                        <div class="reviewer-details">
+                                            <h5>Zeynep K.</h5>
+                                            <div class="review-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="review-date">1 hafta önce</span>
+                                </div>
+                                <p class="review-text">"Video düzenleme için aldım, render süreleri inanılmaz hızlı. Gaming performansı da bonus oldu."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kargo & İade Sekmesi -->
+                    <div class="tab-pane" id="shipping">
+                        <div class="shipping-info">
+                            <h3>Kargo Bilgileri</h3>
+                            <div class="shipping-item">
+                                <i class="fas fa-truck"></i>
+                                <div>
+                                    <h4>Ücretsiz Kargo</h4>
+                                    <p>150₺ üzeri alışverişlerde ücretsiz kargo</p>
+                                    <p>Teslimat süresi: 2-3 iş günü</p>
+                                </div>
+                            </div>
+
+                            <h3>İade Bilgileri</h3>
+                            <div class="shipping-item">
+                                <i class="fas fa-undo"></i>
+                                <div>
+                                    <h4>14 Gün İade Garantisi</h4>
+                                    <p>Ürün hasarsız ve orijinal ambalajında olmalıdır</p>
+                                    <p>İade kargo ücreti müşteriye aittir</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benzer Ürünler -->
+            <section class="related-products">
+                <h2 class="section-title">Benzer Ürünler</h2>
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-badge">İndirim</div>
+                        <div class="product-image">
+                            <img src="https://img.freepik.com/free-photo/rtx-4080-graphics-card_23-2149241988.jpg?w=200&h=200&fit=crop&crop=center" alt="RTX 4080">
+                        </div>
+                        <div class="product-info">
+                            <h3>RTX 4080 Gaming</h3>
+                            <p class="product-desc">16GB GDDR6X, Ray Tracing</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(67 değerlendirme)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="old-price">৳65,999</span>
+                                <span class="current-price">৳59,999</span>
+                            </div>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Sepete Ekle
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-badge">Yeni</div>
+                        <div class="product-image">
+                            <img src="https://img.freepik.com/free-photo/rtx-4070-graphics-card_23-2149241994.jpg?w=200&h=200&fit=crop&crop=center" alt="RTX 4070">
+                        </div>
+                        <div class="product-info">
+                            <h3>RTX 4070 Gaming</h3>
+                            <p class="product-desc">12GB GDDR6X, DLSS 3.0</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(45 değerlendirme)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="old-price">৳45,999</span>
+                                <span class="current-price">৳39,999</span>
+                            </div>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Sepete Ekle
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-badge">Popüler</div>
+                        <div class="product-image">
+                            <img src="https://img.freepik.com/free-photo/amd-rx-graphics-card_23-2149241995.jpg?w=200&h=200&fit=crop&crop=center" alt="RX 7900 XTX">
+                        </div>
+                        <div class="product-info">
+                            <h3>AMD RX 7900 XTX</h3>
+                            <p class="product-desc">24GB GDDR6, FSR 3.0</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(78 değerlendirme)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="old-price">৳75,999</span>
+                                <span class="current-price">৳69,999</span>
+                            </div>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Sepete Ekle
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+<?php
+
+require_once __DIR__ . '/../template/footer.php';
+
+
+
+?>

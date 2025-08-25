@@ -1,0 +1,732 @@
+<?php
+
+
+require_once __DIR__ . '/../template/template.php';
+
+?>
+
+<style>
+    .logo:hover {
+        cursor: pointer;
+    }
+</style>
+
+<!-- Ana İçerik -->
+<main class="main-content">
+    <div class="container">
+        <div class="landing-grid">
+            <!-- Sol Bölüm (80% genişlik) -->
+            <section class="left-section">
+                <!-- Ana Banner -->
+                <div class="hero-banner">
+                    <div class="banner-content">
+                        <div class="banner-text">
+                            <h2 class="main-title">Efsane Kasalar Yenilenmiş Haliyle</h2>
+                            <p class="subtitle">basital.com'da</p>
+                            <div class="banner-features">
+                                <span class="feature"><i class="fas fa-check"></i> Premium Kalite</span>
+                                <span class="feature"><i class="fas fa-check"></i> 3 Yıl Garanti</span>
+                                <span class="feature"><i class="fas fa-check"></i> Ücretsiz Kargo</span>
+                            </div>
+                        </div>
+                        <div class="banner-image">
+                            <img src="https://img.freepik.com/free-photo/computer-case-with-neon-lights_23-2149241975.jpg?w=400&h=300&fit=crop&crop=center"
+                                alt="Gaming Kasa">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 Yatay Kart -->
+                <div class="cards-section">
+                    <div class="card-grid">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://img.freepik.com/free-photo/rtx-4090-graphics-card_23-2149241976.jpg?w=80&h=80&fit=crop&crop=center"
+                                    alt="RTX Serisi">
+                            </div>
+                            <div class="card-content">
+                                <h3>RTX Serisi</h3>
+                                <p>En yeni NVIDIA ekran kartları ile maksimum performans</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://img.freepik.com/free-photo/intel-processor-chip_23-2149241977.jpg?w=80&h=80&fit=crop&crop=center"
+                                    alt="AMD Ryzen">
+                            </div>
+                            <div class="card-content">
+                                <h3>AMD Ryzen</h3>
+                                <p>Çok çekirdekli işlemciler ile hızlı işlem gücü</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="https://img.freepik.com/free-photo/nvme-ssd-drive_23-2149241979.jpg?w=80&h=80&fit=crop&crop=center"
+                                    alt="NVMe SSD">
+                            </div>
+                            <div class="card-content">
+                                <h3>NVMe SSD</h3>
+                                <p>Ultra hızlı depolama çözümleri</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sağ Bölüm (20% genişlik) -->
+            <aside class="right-section">
+                <div class="product-card">
+                    <h3 class="product-title">Günün Kampanyası</h3>
+
+                    <div class="product-image">
+                        <img src="https://img.freepik.com/free-photo/gaming-pc-setup_23-2149241987.jpg?w=200&h=150&fit=crop&crop=center"
+                            alt="Gaming PC">
+                        <div class="discount-badge">%25 İndirim</div>
+                    </div>
+
+                    <div class="product-info">
+                        <h4 class="product-name">Gaming PC RTX 4070</h4>
+                        <p class="product-specs">Intel i7-13700K, 32GB RAM, 1TB NVMe</p>
+
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.9 (127 değerlendirme)</span>
+                        </div>
+
+                        <div class="countdown">
+                            <h5>Kampanya Bitimine Kalan:</h5>
+                            <div class="countdown-timer">
+                                <div class="timer-item">
+                                    <span class="time" id="days">00</span>
+                                    <span class="label">Gün</span>
+                                </div>
+                                <div class="timer-item">
+                                    <span class="time" id="hours">00</span>
+                                    <span class="label">Saat</span>
+                                </div>
+                                <div class="timer-item">
+                                    <span class="time" id="minutes">00</span>
+                                    <span class="label">Dakika</span>
+                                </div>
+                                <div class="timer-item">
+                                    <span class="time" id="seconds">00</span>
+                                    <span class="label">Saniye</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price-section">
+                            <div class="price">
+                                <span class="old-price">₺45,999</span>
+                                <span class="current-price">₺34,499</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                Sepete Ekle
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<!-- Popüler Ürünler -->
+<section class="popular-products">
+    <div class="container">
+        <h2 class="section-title">Popüler Ürünler</h2>
+        <div class="products-grid">
+            <!-- Ürün 1 -->
+            <div class="product-item">
+                <div class="product-badge">En Avantajlı</div>
+                <div class="product-image">
+                    <a href="product-detail.html" class="product-link">
+                        <img src="https://img.freepik.com/free-photo/gaming-pc-setup_23-2149241987.jpg?w=200&h=200&fit=crop&crop=center"
+                            alt="Gaming PC">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3><a href="product-detail.html" class="product-link">Gaming PC RTX 4070</a></h3>
+                    <p class="product-desc">Intel i7-13700K, 32GB RAM, 1TB NVMe</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">4.9 (127)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">₺45,999</span>
+                        <span class="current-price">₺34,499</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 2 -->
+            <div class="product-item">
+                <div class="product-badge">Yeni</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/rtx-4080-graphics-card_23-2149241988.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="RTX 4080">
+                </div>
+                <div class="product-info">
+                    <h3>RTX 4080 Gaming</h3>
+                    <p class="product-desc">NVIDIA GeForce RTX 4080 16GB GDDR6X</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">4.8 (89)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">₺32,999</span>
+                        <span class="current-price">₺28,499</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 3 -->
+            <div class="product-item">
+                <div class="product-badge">İndirim</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/amd-ryzen-processor_23-2149241989.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="AMD Ryzen">
+                </div>
+                <div class="product-info">
+                    <h3>AMD Ryzen 9 7900X</h3>
+                    <p class="product-desc">12 Çekirdek, 24 İş Parçacığı, 5.6GHz</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">4.7 (156)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">₺18,999</span>
+                        <span class="current-price">₺15,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 4 -->
+            <div class="product-item">
+                <div class="product-badge">Popüler</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/nvme-ssd-drive_23-2149241979.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="NVMe SSD">
+                </div>
+                <div class="product-info">
+                    <h3>Samsung 990 Pro 2TB</h3>
+                    <p class="product-desc">PCIe 4.0 NVMe, 7450MB/s Okuma</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">4.9 (203)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">₺4,999</span>
+                        <span class="current-price">₺3,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 5 -->
+            <div class="product-item">
+                <div class="product-badge">Yeni</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/gaming-monitor_23-2149241990.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Gaming Monitor">
+                </div>
+                <div class="product-info">
+                    <h3>ASUS ROG Swift 27"</h3>
+                    <p class="product-desc">2560x1440, 165Hz, 1ms, G-Sync</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">4.8 (94)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">₺12,999</span>
+                        <span class="current-price">₺10,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 6 -->
+            <div class="product-item">
+                <div class="product-badge">İndirim</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/mechanical-gaming-keyboard_23-2149241983.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Gaming Keyboard">
+                </div>
+                <div class="product-info">
+                    <h3>Logitech G Pro X</h3>
+                    <p class="product-desc">Mechanical RGB, GX Blue Switches</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">4.6 (78)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">₺3,999</span>
+                        <span class="current-price">₺2,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- En Çok Satılanlar -->
+<section class="best-sellers">
+    <div class="container">
+        <h2 class="section-title">En Çok Satılanlar</h2>
+        <div class="products-grid">
+            <!-- Ürün 1 -->
+            <div class="product-item">
+                <div class="product-badge best-seller">En Çok Satan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/rtx-4090-graphics-card_23-2149241976.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="RTX 4090">
+                </div>
+                <div class="product-info">
+                    <h3>RTX 4090 Gaming</h3>
+                    <p class="product-desc">24GB GDDR6X, Ray Tracing, DLSS 3.0</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(89 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳89,999</span>
+                        <span class="current-price">৳79,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 2 -->
+            <div class="product-item">
+                <div class="product-badge best-seller">En Çok Satan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/intel-processor-chip_23-2149241977.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Intel i9">
+                </div>
+                <div class="product-info">
+                    <h3>Intel Core i9-13900K</h3>
+                    <p class="product-desc">24 Çekirdek, 32 Thread, 5.8GHz</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(156 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳32,999</span>
+                        <span class="current-price">৳28,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 3 -->
+            <div class="product-item">
+                <div class="product-badge best-seller">En Çok Satan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/ddr5-ram-modules_23-2149241978.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="32GB RAM">
+                </div>
+                <div class="product-info">
+                    <h3>Corsair Vengeance 32GB</h3>
+                    <p class="product-desc">DDR5-6000, CL36, RGB Aydınlatma</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(203 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳4,999</span>
+                        <span class="current-price">৳3,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 4 -->
+            <div class="product-item">
+                <div class="product-badge best-seller">En Çok Satan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/nvme-ssd-drive_23-2149241979.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="2TB SSD">
+                </div>
+                <div class="product-info">
+                    <h3>WD Black SN850X 2TB</h3>
+                    <p class="product-desc">PCIe 4.0, 7300MB/s Okuma</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(178 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳6,999</span>
+                        <span class="current-price">৳5,499</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 5 -->
+            <div class="product-item">
+                <div class="product-badge best-seller">En Çok Satan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/gaming-monitor_23-2149241990.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="27 Monitor">
+                </div>
+                <div class="product-info">
+                    <h3>LG 27GP850-B 27"</h3>
+                    <p class="product-desc">1440p, 165Hz, 1ms, G-Sync</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(245 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳12,999</span>
+                        <span class="current-price">৳10,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 6 -->
+            <div class="product-item">
+                <div class="product-badge best-seller">En Çok Satan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/gaming-mouse_23-2149241991.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Gaming Mouse">
+                </div>
+                <div class="product-info">
+                    <h3>Logitech G Pro X Superlight</h3>
+                    <p class="product-desc">25K DPI, 70g, Wireless</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(312 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳3,999</span>
+                        <span class="current-price">৳2,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Öne Çıkan Ürünler -->
+<section class="featured-products">
+    <div class="container">
+        <h2 class="section-title">Öne Çıkan Ürünler</h2>
+        <div class="products-grid">
+            <!-- Ürün 1 -->
+            <div class="product-item">
+                <div class="product-badge featured">Öne Çıkan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/gaming-laptop_23-2149241981.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Gaming Laptop">
+                </div>
+                <div class="product-info">
+                    <h3>ASUS ROG Strix G16</h3>
+                    <p class="product-desc">RTX 4070, Intel i7-13650H, 16GB RAM</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(167 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳65,999</span>
+                        <span class="current-price">৳59,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 2 -->
+            <div class="product-item">
+                <div class="product-badge featured">Öne Çıkan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/wireless-gaming-headset_23-2149241982.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Gaming Headset">
+                </div>
+                <div class="product-info">
+                    <h3>SteelSeries Arctis Pro</h3>
+                    <p class="product-desc">7.1 Surround, RGB, Wireless</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(189 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳8,999</span>
+                        <span class="current-price">৳6,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 3 -->
+            <div class="product-item">
+                <div class="product-badge featured">Öne Çıkan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/mechanical-gaming-keyboard_23-2149241983.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Gaming Keyboard">
+                </div>
+                <div class="product-info">
+                    <h3>Razer BlackWidow V3</h3>
+                    <p class="product-desc">Mechanical, RGB, Macro Keys</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(234 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳5,999</span>
+                        <span class="current-price">৳4,499</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 4 -->
+            <div class="product-item">
+                <div class="product-badge featured">Öne Çıkan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/gaming-mouse-pad_23-2149241984.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Gaming Mousepad">
+                </div>
+                <div class="product-info">
+                    <h3>SteelSeries QcK XXL</h3>
+                    <p class="product-desc">900x400mm, RGB Edge, Anti-Slip</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(156 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳2,999</span>
+                        <span class="current-price">৳1,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 5 -->
+            <div class="product-item">
+                <div class="product-badge featured">Öne Çıkan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/gaming-chair_23-2149241985.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Gaming Chair">
+                </div>
+                <div class="product-info">
+                    <h3>Secretlab Titan Evo</h3>
+                    <p class="product-desc">Ergonomik, Lumbar Support, RGB</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(98 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳18,999</span>
+                        <span class="current-price">৳15,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ürün 6 -->
+            <div class="product-item">
+                <div class="product-badge featured">Öne Çıkan</div>
+                <div class="product-image">
+                    <img src="https://img.freepik.com/free-photo/streaming-microphone_23-2149241986.jpg?w=200&h=200&fit=crop&crop=center"
+                        alt="Streaming Microphone">
+                </div>
+                <div class="product-info">
+                    <h3>Blue Yeti X Professional</h3>
+                    <p class="product-desc">USB Condenser, RGB, Multi-Pattern</p>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">(203 değerlendirme)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">৳7,999</span>
+                        <span class="current-price">৳5,999</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<?php
+
+require_once __DIR__ . '/../template/footer.php';
+
+?>
