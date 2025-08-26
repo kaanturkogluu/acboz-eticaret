@@ -1,8 +1,9 @@
 <?php
 require_once __DIR__ . '/../core/autoloader.php';
 
-// Session instance'ı oluştur
-$session = Session::getInstance();
+require_once __DIR__ . '/../template/notifications.php';
+
+ 
 
 // Session timeout mesajını cookie'den al
 $sessionTimeoutMessage = null;
@@ -28,7 +29,6 @@ if ($sessionTimeoutMessage) {
 }
 
 // Notifications include et (session artık mevcut)
-require_once __DIR__ . '/../template/notifications.php';
 
 $router = Router::getInstance();
 $csrf = CSRF::getInstance();
@@ -40,7 +40,7 @@ $csrf = CSRF::getInstance();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Girişi | ACBOZ Panel</title>
-    <link rel="stylesheet" href="<?= Router::baseUrl() ?>/assets/css/login.css">
+    <link rel="stylesheet" href="<?= Router::baseUrl() ?>panel/assets/css/login.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -423,7 +423,7 @@ $csrf = CSRF::getInstance();
         </div>
     </div>
 
-    <script src="<?= Router::baseUrl() . '/assets/js/script.js'; ?>"></script>
+    <script src="<?= Router::baseUrl() . 'panel/assets/js/script.js'; ?>"></script>
     <script>
         document.querySelectorAll(".imgClick").forEach(function (element) {
             element.addEventListener("click", function () {
