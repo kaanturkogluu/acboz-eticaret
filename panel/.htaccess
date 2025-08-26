@@ -1,6 +1,6 @@
 # URL yönlendirmeyi aktif et
 RewriteEngine On
-RewriteBase /eticaret/panel/
+RewriteBase /panel/
 
 # classes klasörüne erişim yasağı
 RewriteRule ^classes/ - [F,L]
@@ -10,13 +10,16 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.+)$ $1.php [L]
 
-# pages klasörünü kısaltma (örnek)
+# Default route to pages/anasayfa.php when hitting /panel/ or /panel
+DirectoryIndex index.php pages/anasayfa.php
+
+# Short route for anasayfa
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(anasayfa)$ pages/$1.php [L]
+RewriteRule ^anasayfa/?$ pages/anasayfa.php [L]
 
 # giriş sayfası
-RewriteRule ^giris$ pages/giris.php [L]
+RewriteRule ^giris/?$ pages/giris.php [L]
 
 # özel 404 sayfası
 ErrorDocument 404 /eticaret/panel/pages/404.php

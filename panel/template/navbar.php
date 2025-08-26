@@ -112,7 +112,7 @@
                                 <span>Yardım</span>
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="<?=ROuter::controllers('logoutController')?>" class="dropdown-item logout">
+                            <a href="<?=Router::controllers('logoutController')?>" class="dropdown-item logout">
                                 <i class="fas fa-sign-out-alt"></i>
                                 <span>Çıkış Yap</span>
                             </a>

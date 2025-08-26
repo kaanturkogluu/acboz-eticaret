@@ -7,6 +7,9 @@ RewriteRule . - [L]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule . - [L]
 
-# Route /eticaret/giris and /eticaret/panel to panel/pages/giris.php
-RewriteRule ^(?:giris|panel)/?$ panel/pages/giris.php [L]
+# Route /eticaret/giris to login page
+RewriteRule ^giris/?$ panel/pages/giris.php [L]
+
+# Route /eticaret/panel to panel index
+RewriteRule ^panel/?$ panel/index.php [L]
 
