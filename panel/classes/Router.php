@@ -20,7 +20,7 @@ class Router
     }
     public static function controllers($controllerName)
     {
-        return self::baseUrl() . "/controllers/" . htmlspecialchars(rtrim($controllerName, ".php")) . ".php";
+        return self::baseUrl() . "panel/controllers/" . htmlspecialchars(rtrim($controllerName, ".php")) . ".php";
     }
     public static function baseUrl()
     {

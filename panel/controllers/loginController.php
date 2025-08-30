@@ -33,7 +33,7 @@ switch ($action) {
                 $session->set('ip', $_SERVER['REMOTE_ADDR']);
                 $session->set('ua', $_SERVER['HTTP_USER_AGENT']);
                 $session->extendSession();
-                $router->redirect(Router::view('anasayfa'));
+                $router->redirect(Router::view('panel/anasayfa'));
                 break;
 
             case 'personel':
@@ -50,7 +50,7 @@ switch ($action) {
 
             default:
                 $session->setFlash('error', 'Tanımsız Kullanıcı');
-                $router->redirect(Router::view('giris'));
+                $router->redirect(Router::view('panel/giris'));
                 break;
         }
         break;

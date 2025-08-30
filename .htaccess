@@ -1,5 +1,8 @@
 RewriteEngine On
-RewriteBase /eticaret/
+RewriteBase /acboz-eticaret/
+
+# Force /panel to login page
+RewriteRule ^panel/?$ panel/pages/giris.php [L]
 
 # Keep existing files and directories working normally first
 RewriteCond %{REQUEST_FILENAME} -f
@@ -10,6 +13,5 @@ RewriteRule . - [L]
 # Route /eticaret/giris to login page
 RewriteRule ^giris/?$ panel/pages/giris.php [L]
 
-# Route /eticaret/panel to panel index
-RewriteRule ^panel/?$ panel/index.php [L]
+ 
 

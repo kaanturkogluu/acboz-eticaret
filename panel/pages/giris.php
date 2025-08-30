@@ -294,7 +294,7 @@ $csrf = CSRF::getInstance();
                             <div class="d-flex align-items-center justify-content-center h-100">
                                 <div class="login-image-content text-white">
                                     <div class="text-center">
-                                        <img src="<?= Router::baseUrl() ?>/assets/images/logo.png"
+                                        <img src="<?= Router::baseUrl() ?>panel/assets/images/logo.png"
                                             style="cursor:pointer;" alt="Admin Logo" class="align-self-center imgClick "
                                             height="200">
 
@@ -328,14 +328,14 @@ $csrf = CSRF::getInstance();
 
 
                                 <div class="text-center mb-4">
-                                    <img src="<?= Router::baseUrl() ?>/assets/images/logo.png" alt=""
+                                    <img src="<?= Router::baseUrl() ?>panel/assets/images/logo.png" alt=""
                                         class="brand-logo imgClick" style="cursor: pointer;">
                                     <h4 class="login-title">Admin Girişi</h4>
 
                                 </div>
 
 
-                                <form method="POST" action="<?= Router::baseUrl() ?>/controllers/loginController.php">
+                                <form method="POST" action="<?= Router::baseUrl() ?>panel/controllers/loginController.php">
 
                                     <input type="hidden" name="action" value="login">
                                     <?php

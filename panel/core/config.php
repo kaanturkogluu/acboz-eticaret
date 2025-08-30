@@ -35,7 +35,7 @@ $GLOBALS['app_config'] = [
     'session_lifetime' => 120,
     'websocket_port' => 8080, // WebSocket sunucusu için port numarası
     'livechat' => false,// chat aktif olacak mı ?
-    'base_file_name' => 'eticaret',  // kök dizin dosya adı 
+    'base_file_name' => 'acboz-eticaret',  // kök dizin dosya adı 
     'base_panel_folder_name'=>'panel'// panelin olduğu dosya adi
 ];
 
